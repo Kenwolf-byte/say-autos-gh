@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-body: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-blue: #1B6FFF;
+  --color-brand-gold: #D4A417;
+  --color-brand-gold-light: #F0C040;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-body);
+}
+
+/* ── Liquid Glass (subtle) ── */
+.liquid-glass {
+  background: rgba(27, 111, 255, 0.04);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 20px rgba(27, 111, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(27, 111, 255, 0.3) 20%,
+    rgba(27, 111, 255, 0) 40%,
+    rgba(27, 111, 255, 0) 60%,
+    rgba(27, 111, 255, 0.3) 80%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Liquid Glass Strong (CTA) ── */
+.liquid-glass-strong {
+  background: rgba(27, 111, 255, 0.08);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 30px rgba(27, 111, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-strong::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(27, 111, 255, 0.4) 20%,
+    rgba(27, 111, 255, 0) 40%,
+    rgba(27, 111, 255, 0) 60%,
+    rgba(27, 111, 255, 0.4) 80%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Gold accent variant ── */
+.liquid-glass-gold {
+  background: rgba(212, 164, 23, 0.06);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 20px rgba(212, 164, 23, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(212, 164, 23, 0.4) 20%,
+    rgba(212, 164, 23, 0) 40%,
+    rgba(212, 164, 23, 0) 60%,
+    rgba(212, 164, 23, 0.4) 80%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Navbar always on top ── */
+/* Navbar is rendered at root level with inline style: z-index: 2147483647 */
+/* No additional CSS needed — the inline style handles it globally */
