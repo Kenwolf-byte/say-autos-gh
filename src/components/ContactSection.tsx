@@ -1,4 +1,4 @@
-import { MapPin, Car, Phone, MessageCircle, ArrowUpRight } from 'lucide-react'
+import { MapPin, Car, Phone, MessageCircle } from 'lucide-react'
 import FadeIn from './FadeIn'
 
 const ContactSection = () => {
